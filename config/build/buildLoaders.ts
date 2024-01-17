@@ -12,7 +12,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
           options: {
             modules:  {
               auto: (resPath: string) => resPath.includes('.module.'),
-              localIndetName: isDev ?  '[path][name]__[local]': '[hash:base64:8]',
+              localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]',
             },
           }
         },
