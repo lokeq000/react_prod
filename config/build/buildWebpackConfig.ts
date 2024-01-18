@@ -9,6 +9,7 @@ export function buildWebpackConfig (options: BuildOptions): webpack.Configuratio
   const { mode, paths, isDev } = options;
   return {
     mode,
+    watch: true,
     entry: paths.entry,
     module: {
       rules: buildLoaders(options)
