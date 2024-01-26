@@ -7,5 +7,14 @@
 
   border: none;
   background: none;
-  outtline: none;
+  outline: none;
+}
+
+.primary {
+  background-color: var(--primary-color);
+  border: var(--primary-color);
+}
+
+.secondary {
+  background-color: var(--secondary-color);
 }
