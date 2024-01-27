@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { ThemeSwitcher } from 'widgets/ThemeSwithcer';
 import { LangSwitcher } from 'shared/ui/LangSwitcher';
-import { Button } from 'shared/ui/Button/Button';
+import { Button } from 'shared/ui/Button';
 import { useTranslation } from 'react-i18next';
 import cls from './SideBar.module.scss';
 
