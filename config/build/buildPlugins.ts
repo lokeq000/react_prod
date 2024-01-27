@@ -19,11 +19,15 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
     }),
   ];
 
-  // if (isDev) {
-  //   console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
-  //   plugins.push(new BundleAnalyzerPlugin({
-  //     openAnalyzer: false,
-  //   }));
-  // }
+  plugins.push(new BundleAnalyzerPlugin({
+    openAnalyzer: false,
+  }));
+
+  if (isDev) {
+    console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+    plugins.push(new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }));
+  }
   return plugins;
 }
