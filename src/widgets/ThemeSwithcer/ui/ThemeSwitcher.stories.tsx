@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { PageLoader } from './PageLoader';
+import { ThemeSwitcher } from './ThemeSwitcher';
 
-const meta: Meta<typeof PageLoader> = {
-  title: 'widgets/PageLoader',
-  component: PageLoader,
+const meta: Meta<typeof ThemeSwitcher> = {
+  title: 'widgets/ThemeSwitcher',
+  component: ThemeSwitcher,
 
   argTypes: {
   },
 };
 
 export default meta;
-type Story = StoryObj<typeof PageLoader>;
+type Story = StoryObj<typeof ThemeSwitcher>;
 
 export const Light: Story = {
   args: {

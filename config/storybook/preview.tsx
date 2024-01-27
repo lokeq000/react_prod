@@ -1,17 +1,18 @@
-import type { Preview } from "@storybook/react";
-import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import type { Preview } from '@storybook/react';
+import React from 'react';
 import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator/StyleDecorator';
-import { Theme } from '../../src/app/rpoviders/ThemeProvider/index'
-import React from "react";
+
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
+    actions: { argTypesRegex: '^on[A-Z].*' },
     decorators: [
       StyleDecorator,
       // ThemeDecorator(Theme.LIGHT),
       (Story) => (
-        <div className="app dark" style={{border: '10px solid black'}}>aaaa <Story /></div>
-      )
+        <div className="app dark" style={{ border: '10px solid black' }}>
+          <Story />
+        </div>
+      ),
     ],
     controls: {
       matchers: {
@@ -21,7 +22,4 @@ const preview: Preview = {
     },
   },
 };
-console.log(StyleDecorator, 'StyleDecorator');
-console.log(ThemeDecorator(Theme.LIGHT));
 export default preview;
-

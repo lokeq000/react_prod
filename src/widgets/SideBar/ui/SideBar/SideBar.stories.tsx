@@ -19,8 +19,8 @@ export const Light: Story = {
   decorators: [
     // ThemeDecorator(Theme.LIGHT),
     (Story) => (
-      <div className="app light" style={{border: '10px solid black'}}>aaaa <Story /></div>
-    )
+      <div className="app light" style={{ border: '10px solid black' }}><Story /></div>
+    ),
   ],
 };
 
@@ -30,7 +30,7 @@ export const Dark: Story = {
   decorators: [
     // ThemeDecorator(Theme.LIGHT),
     (Story) => (
-      <div className="app dark" style={{border: '10px solid black'}}>aaaa <Story /></div>
-    )
+      <div className="app dark" style={{ border: '10px solid black' }}><Story /></div>
+    ),
   ],
 };

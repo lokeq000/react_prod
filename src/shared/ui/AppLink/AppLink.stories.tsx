@@ -1,21 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { BrowserRouter } from 'react-router-dom';
-import { NavBar } from './NavBar';
+import { AppLink } from './AppLink';
 
-const meta: Meta<typeof NavBar> = {
-  title: 'widgets/NavBar',
-  component: NavBar,
+const meta: Meta<typeof AppLink> = {
+  title: 'shared/AppLink',
+  component: AppLink,
 
   argTypes: {
   },
 };
 
 export default meta;
-type Story = StoryObj<typeof NavBar>;
+type Story = StoryObj<typeof AppLink>;
 
 export const Light: Story = {
   args: {
+    children: 'test',
   },
   decorators: [
     // ThemeDecorator(Theme.LIGHT),
@@ -27,6 +28,7 @@ export const Light: Story = {
 
 export const Dark: Story = {
   args: {
+    children: 'test',
   },
   decorators: [
     // ThemeDecorator(Theme.LIGHT),

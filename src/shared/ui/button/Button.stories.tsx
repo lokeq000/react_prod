@@ -5,12 +5,14 @@ import { Button, ThemeBtn } from './Button';
 const meta: Meta<typeof Button> = {
   title: 'shared/Button',
   component: Button,
-    decorators: [
-      // ThemeDecorator(Theme.LIGHT),
-      (Story) => (
-        <div className="app dark" style={{border: '10px solid black'}}>aaaa <Story /></div>
-      )
-    ],
+  decorators: [
+    // ThemeDecorator(Theme.LIGHT),
+    (Story) => (
+      <div className="app dark" style={{ border: '10px solid black' }}>
+        <Story />
+      </div>
+    ),
+  ],
   argTypes: {
     theme: { control: ThemeBtn.CLEAR },
   },

@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { PageLoader } from './PageLoader';
+import { LangSwitcher } from './LangSwitcher';
 
-const meta: Meta<typeof PageLoader> = {
-  title: 'widgets/PageLoader',
-  component: PageLoader,
+const meta: Meta<typeof LangSwitcher> = {
+  title: 'shared/LangSwitcher',
+  component: LangSwitcher,
 
   argTypes: {
   },
 };
 
 export default meta;
-type Story = StoryObj<typeof PageLoader>;
+type Story = StoryObj<typeof LangSwitcher>;
 
 export const Light: Story = {
   args: {
