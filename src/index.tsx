@@ -4,6 +4,7 @@ import { ThemeProvider } from 'app/rpoviders/ThemeProvider';
 import { ErrorBoundary } from 'app/rpoviders/ErrorBoundary';
 import { App } from './app/App';
 import 'shared/config/i18n/i18n';
+import 'app/styles/index.scss';
 
 render(
   <BrowserRouter>

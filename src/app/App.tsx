@@ -1,14 +1,13 @@
-import './styles/index.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { NavBar } from 'widgets/NavBar';
 import { SideBar } from 'widgets/SideBar';
-import { Suspense, useEffect } from 'react';
+import { Suspense, useEffect, useState } from 'react';
+import { Modal } from 'shared/ui/Modal/Modal';
 import { AppRouter } from './rpoviders/router';
 import { useTheme } from './rpoviders/ThemeProvider';
 
 export const App = () => {
   const { theme } = useTheme();
-
   return (
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback="">
