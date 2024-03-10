@@ -11,14 +11,7 @@ export const NavBar = ({ className }: NavbarProps) => {
   const { t } = useTranslation();
   return (
     <div className={classNames(cls.navbar, {}, [className])}>
-      <div className={cls.links}>
-        <AppLink to="/" className={cls.mainLink}>
-          {t('Главная')}
-        </AppLink>
-        <AppLink to="/about">
-          {t('Другое')}
-        </AppLink>
-      </div>
+      <div className={cls.links} />
     </div>
   );
 };

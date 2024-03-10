@@ -4,10 +4,11 @@ import { Button, ThemeBtn } from 'shared/ui/Button';
 import cls from './LangSwitcher.module.scss';
 
 interface LangSwitcherProops {
-  className?: string
+  className?: string;
+  short?: boolean;
 }
 
-export const LangSwitcher = ({ className }: LangSwitcherProops) => {
+export const LangSwitcher = ({ className, short }: LangSwitcherProops) => {
   const { t, i18n } = useTranslation();
 
   const toggleLang = () => {
@@ -20,7 +21,7 @@ export const LangSwitcher = ({ className }: LangSwitcherProops) => {
       theme={ThemeBtn.CLEAR}
       onClick={toggleLang}
     >
-      {t('Язык')}
+      {short ? t('Язык').slice(0, 3) : t('Язык')}
     </Button>
   );
 };
