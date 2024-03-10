@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { BrowserRouter } from 'react-router-dom';
 import { SideBar } from './SideBar';
 
 const meta: Meta<typeof SideBar> = {
@@ -19,7 +20,7 @@ export const Light: Story = {
   decorators: [
     // ThemeDecorator(Theme.LIGHT),
     (Story) => (
-      <div className="app light" style={{ border: '10px solid black' }}><Story /></div>
+      <BrowserRouter><div className="app light" style={{ border: '10px solid black' }}><Story /></div></BrowserRouter>
     ),
   ],
 };
@@ -30,7 +31,7 @@ export const Dark: Story = {
   decorators: [
     // ThemeDecorator(Theme.LIGHT),
     (Story) => (
-      <div className="app dark" style={{ border: '10px solid black' }}><Story /></div>
+      <BrowserRouter><div className="app dark" style={{ border: '10px solid black' }}><Story /></div></BrowserRouter>
     ),
   ],
 };
