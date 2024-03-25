@@ -16,7 +16,7 @@ interface ModalProops {
   children?: ReactNode;
   isOpen?: boolean;
   onClose?: () => void;
-  theme?: string;
+  theme?: Theme;
 }
 
 export const Modal = (props: ModalProops) => {
