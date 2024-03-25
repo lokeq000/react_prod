@@ -20,7 +20,8 @@
     "storybook:build": "storybook build -c ./config/storybook",
     "visual:report": "npm-run-all visual:report:*",
     "visual:report:json": "node scripts/generate-visual-json-report.js",
-    "visual:report:html": "reg-cli --from .loki/report.json --report .loki/report.html"
+    "visual:report:html": "reg-cli --from .loki/report.json --report .loki/report.html",
+    "start:dev:server": "json-server --watch ./json-server/db.json --port 8000"
   },
   "keywords": [],
   "author": "",
@@ -64,6 +65,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.2",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "json-server": "^0.17.0",
     "eslint-plugin-storybook": "^0.6.15",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
