@@ -1,15 +1,22 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import {
-  ReactNode, useCallback, useEffect, useRef, useState,
+  ReactNode, createContext, useCallback, useEffect, useRef, useState,
 } from 'react';
+import { Theme } from 'app/rpoviders/ThemeProvider';
+import { ThemeContextProps } from 'app/rpoviders/ThemeProvider/lib/ThemeContext';
 import cls from './Modal.module.scss';
 import { Portal } from '../Portal/Portal';
+
+export const ThemeContext = createContext<ThemeContextProps>({});
+
+export const LOCAL_STORAGE_THEME_KEY = 'theme';
 
 interface ModalProops {
   className?: string;
   children?: ReactNode;
   isOpen?: boolean;
   onClose?: () => void;
+  theme?: string;
 }
 
 export const Modal = (props: ModalProops) => {
@@ -18,6 +25,7 @@ export const Modal = (props: ModalProops) => {
     children,
     isOpen,
     onClose,
+    theme = Theme.LIGHT,
   } = props;
 
   const [isClosing, setIsClosing] = useState(false);
@@ -59,7 +67,7 @@ export const Modal = (props: ModalProops) => {
   }, [isOpen, onKeyDown]);
   return (
     <Portal>
-      <div className={classNames(cls.Modal, mods, [className])}>
+      <div className={classNames(cls.Modal, mods, [className, theme])}>
         <div
           className={cls.overlay}
           onClick={closeHandler}
